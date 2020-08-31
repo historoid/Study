@@ -2,8 +2,8 @@
 
 ## GitHubにアカウント登録を済ましておく。
 
-`git config --global user.name "username"`
-`git config --global user.email user@address.com`
+`git config --global user.name "username"`  
+`git config --global user.email user@address.com`  
 
 ## 新規プロジェクトをはじめる
 
@@ -19,29 +19,29 @@
 そのあとに、GitHub上で新しいリポジトリ（既存でも可）を作っておく。  
 InitializeでReadMe.mdを作らない設定で先に進むと、コマンドが表示される。
 
-`git remote add origin git@github.com:historoid/Res.git`
-`git branch -M master` <- error: refname refs/heads/master not found
-`git push -u origin master`
+`git remote add origin git@github.com:historoid/Res.git`  
+`git branch -M master` <- error: refname refs/heads/master not found  
+`git push -u origin master`  
 
 ローカル上で、`git commit`まで終わらせて上記のコマンドを実行していく。  
 下記のコマンドはUdemyでの例  
-`git remote add origin https://xxxxxxxxx.git` でローカルリポジトリと、作成したGitHub上のリポジトリがつながる。
+`git remote add origin https://xxxxxxxxx.git` でローカルリポジトリと、作成したGitHub上のリポジトリがつながる。  
 
-ローカルではファイルの編集後、`git add hoge.txt`して`git commit`  
+ローカルではファイルの編集後、`git add hoge.txt`して`git commit`    
 そのとき、Vimが開くのでコメント追記。
 
 その後に`git remote ...`を実行。
 
 ## ステージングエリアへ追加
-`git add filename.txt`
+`git add filename.txt`  
 `git add .` <- すべての変更ファイルをステージングエリアへ追加
 
 ## リポジトリへコミット
 
 リポジトリへ変更を記録
 
-`git commit`
-`git commit -v` で変更内容を表示
+`git commit`  
+`git commit -v` で変更内容を表示  
 
 1. 変更内容の要約
 1. 空行
@@ -49,19 +49,19 @@ InitializeでReadMe.mdを作らない設定で先に進むと、コマンドが�
 
 ## リポジトリの状態を確認する
 
-`git status`
+`git status`  
 
 ## ファイルの削除を反映
 
-`git rm filename.txt`
+`git rm filename.txt`  
 
 ## 複数ファイルの変更
-`git add .`
+`git add .`  
 
 ## 変更履歴を確認する
 
-`git log`
-`git log -n 3` 最新コミット3つまで表示
+`git log`  
+`git log -n 3` 最新コミット3つまで表示  
 
 リポジトリにコミットされたログを確認することができる。  
 コミットのハッシュ値等が表示される。ハッシュ値でそこへ戻ることができたりする。
@@ -75,8 +75,30 @@ InitializeでReadMe.mdを作らない設定で先に進むと、コマンドが�
 
 ## GitHubにPushする
 まずはリモートリポジトリを登録しておく
-`git remote add`
+`git remote add`  
 `git remote add origin https://github.com/user/repo.git`
 
 ローカルの内容をリモートへ送る
-`git push origin repo_name`
+`git push origin repo_name`  
+
+## Gitでの管理から外す
+.gitignoreファイルに指定する。  
+例えば自動生成されるファイルやパスワードが記載されているファイルを無視したい。  
+
+`#` でコメント  
+ファイル名を書くだけでOK
+
+コミットしてしまったら、`git rm filename`  
+`git rm -r directory`でもOK
+
+`git rm --cached filename` でもよいが、管理からは外れないのでgitignoreファイルに追加しておくこと。
+
+## gitignore
+
+`filename.php` <- ディレクトリを問わず、その名前のファイルを除外
+
+`/filename.php` <- gitignoreファイルと同じ階層のphpファイルを除外
+
+
+
+
