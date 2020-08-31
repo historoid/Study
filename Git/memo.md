@@ -99,6 +99,9 @@ InitializeでReadMe.mdを作らない設定で先に進むと、コマンドが�
 
 `/filename.php` <- gitignoreファイルと同じ階層のphpファイルを除外
 
+## local
+ローカルで記入
+
 
 
 
