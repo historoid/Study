@@ -32,4 +32,4 @@ hello-worldのイメージだと、'docker run'したときに自動的にテキ
 'docker run -it image_name bash'  
  'run'したときにbashを起動する。
  
- 
+
