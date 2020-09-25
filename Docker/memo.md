@@ -60,6 +60,33 @@ UbuntuはUbuntuでも、バージョンが違うものはタグ名で管理す�
 `docker push registry-1.docker.io/library/ubuntu:latest`  
 `docker push hostname:port/username/repo:tag`となっている。
 
+docker image名は、dockerhubのリポジトリ名と一致していなくてはならない。  
+
+## imageのpush
+dockerhubには、自分で追加したレイヤーのみがアップされる。 
+すでにあるレイヤーは共有されている。
+
+## imageの削除
+`docker rmi image_name`
+
+## imageのpull
+`docker pull image_name`
+
+## docker run は何をしているのか
+`docker run` = `docker create` + `docker start`  
+つまりコンテナを作って、起動している。  
+`docker start`ではデフォルトコマンドが実行されている。  
+hello-worldのイメージでは、hello worldが表示されるだけ。  
+その後は、`exited`になる。
+
+## デフォルトコマンドの結果を見る
+`docker start -a`  
+これで出力結果が見られる。
+
+## デフォルトコマンド
+`docker ps -a`で見ることのできるCOMMANDのところが、デフォルトコマンドである。  
+`jupyter lab --ip....`がデフォルトコマンドになっているときは、jupyterlabが起動している。
+
 
 
 
