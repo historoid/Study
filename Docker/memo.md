@@ -87,6 +87,8 @@ hello-worldのイメージでは、hello worldが表示されるだけ。
 `docker ps -a`で見ることのできるCOMMANDのところが、デフォルトコマンドである。  
 `jupyter lab --ip....`がデフォルトコマンドになっているときは、jupyterlabが起動している。
 
+## AWS
+
 
 
 
