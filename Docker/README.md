@@ -15,7 +15,7 @@ Docker imageは、Docker fileから作られる。
 `docker images`
 
 ## コンテナの作成
-`docker run image_name`  
+`docker run <image_name>`  
 
 1. run
 1. create
@@ -29,16 +29,16 @@ hello-worldのイメージだと、`docker run`したときに自動的にテキ
 `docker ps`
 
 ## コンテナを起動してbashを表示
-`docker run -it image_name bash`  
+`docker run -it <image_name> bash`  
  `run`したときにbashを起動する。
  
 ## コンテナからDocker imageをつくる
 自分でコンテナの中身を変えたら、新しいDocker imageを作る。  
 新しいDocker imageをメンバーに配れば良い。  
-`docker commit container_id image_name`
+`docker commit <container_id> <image_name>`
 
 ## ExitedからUpへ
-`docker restart container_id`
+`docker restart <container_id>`
 
 ## DockerHubに自分のリポジトリを作る
 UbuntuはUbuntuでも、バージョンが違うものはタグ名で管理する。  
