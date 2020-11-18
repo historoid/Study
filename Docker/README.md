@@ -87,18 +87,33 @@ hello-worldのイメージでは、hello worldが表示されるだけ。
 `docker ps -a`で見ることのできるCOMMANDのところが、デフォルトコマンドである。  
 `jupyter lab --ip....`がデフォルトコマンドになっているときは、jupyterlabが起動している。
 
-## AWS
+## 22. docker run は何をしているのか
 
+run = create + start
 
+`docker start`ではデフォルトコマンドを実行しておしまい。すぐにexited状態になる。つまり一瞬だけ`up`状態になる。  
+逆に`docker create`ではコンテナが作られるだけで、デフォルトコマンドは実行されない。
 
+`docker run hello-world`をもう一度見てみよう。色々テキストが出てくるはず。  
+でも、これで作ったコンテナを`start`してもhello-worldテキストは出てこない。  
+実は`docker start`では表示されない。テキストを見るには`docker start -a`で見ることができる(attachの略)。
 
+## lecture 23. コマンドの上書き
 
+`docker run -it ubuntu bash`では、デフォルトコマンドを`bash`で上書きしていることを意味している。
 
+## 24. `-it`って何してるの？
 
+`-i`はホストのSTDIN/OUT（標準入出力）をコンテナの標準入出力をつなげる。
 
+`-t`はコンテナの標準出力を整形して、ホストに表示させる。  
+`docker run -t ubuntu bash`とするとコマンドを受け付けるし、返り値も返ってくるが、出力の形式が汚い（prettyじゃない）。
 
+## 25. コンテナの削除
 
-
+`docker rm <container_name>`で削除。  
+`docker sotop <container_name>`で止める。コンテナが止まってないと削除できないので。  
+`docker system prune`で`exited`、`dangling`（container_nameが<none>）のコンテナを一括削除できる。
 
 
 
