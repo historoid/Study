@@ -50,5 +50,44 @@
 
 [私のウェブサイトです](https://historoid.com)
 
+### 画像リンク
+
+リンクと似ている。
+
+```
+![<表示される文字列>](URL)
+```
+
+![Dog](https://www.google.com/url?sa=i&url=https%3A%2F%2Feverevo.com%2Fevent%2F57319&psig=AOvVaw1blFAcob1P4DfjdBO7PCPm&ust=1607005265578000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPDXmaK_r-0CFQAAAAAdAAAAABAD)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
